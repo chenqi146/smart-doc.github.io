@@ -854,9 +854,260 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h1>
-<h2 id="&#x5355;&#x6A21;&#x5757;">&#x5355;&#x6A21;&#x5757;</h2>
-<h2 id="&#x591A;&#x6A21;&#x5757;">&#x591A;&#x6A21;&#x5757;</h2>
-<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> &#xA9; All Rights Reserved </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> updated 2023-10-30 22:18:20 </span> </footer>
+<h2 id="&#x5355;&#x6A21;&#x5757;"><a href="https://github.com/smart-doc-group/smart-doc-example-cn" target="_blank">&#x5355;&#x6A21;&#x5757;</a></h2>
+<h3 id="&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x7ED3;&#x6784;">&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x7ED3;&#x6784;</h3>
+<pre><code class="lang-shell">smart-doc-example-cn
+.
+&#x251C;&#x2500;&#x2500; pom.xml
+&#x251C;&#x2500;&#x2500; src
+&#x2502;   &#x251C;&#x2500;&#x2500; main
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; java
+&#x2502;   &#x2502;   &#x2502;   &#x2514;&#x2500;&#x2500; com
+&#x2502;   &#x2502;   &#x2502;       &#x2514;&#x2500;&#x2500; power
+&#x2502;   &#x2502;   &#x2502;           &#x2514;&#x2500;&#x2500; doc
+&#x2502;   &#x2502;   &#x2502;               &#x2514;&#x2500;&#x2500; controller
+&#x2502;   &#x2502;   &#x2502;               &#x2514;&#x2500;&#x2500; entity
+&#x2502;   &#x2502;   &#x2502;               &#x2514;&#x2500;&#x2500; service
+&#x2502;   &#x2502;   &#x2514;&#x2500;&#x2500; resources
+&#x2502;   &#x2502;       &#x251C;&#x2500;&#x2500; application.yml
+&#x2502;   &#x2502;       &#x2514;&#x2500;&#x2500; smart-doc.json
+</code></pre>
+<h3 id="pom&#x793A;&#x4F8B;"><code>pom</code>&#x793A;&#x4F8B;</h3>
+<pre><code class="lang-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span><span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">project</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://maven.apache.org/POM/4.0.0&quot;</span> <span class="hljs-attr">xmlns:xsi</span>=<span class="hljs-string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+         <span class="hljs-attr">xsi:schemaLocation</span>=<span class="hljs-string">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">modelVersion</span>&gt;</span>4.0.0<span class="hljs-tag">&lt;/<span class="hljs-name">modelVersion</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.power.doc<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>smart-doc-example-cn<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>0.0.1-SNAPSHOT<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">packaging</span>&gt;</span>jar<span class="hljs-tag">&lt;/<span class="hljs-name">packaging</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>smart-doc-example-cn<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">description</span>&gt;</span>log4j2<span class="hljs-tag">&lt;/<span class="hljs-name">description</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">parent</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>3.1.1<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">relativePath</span>/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">parent</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">build</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">plugins</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plugin</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">plugin</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plugin</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.github.shalousun<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>smart-doc-maven-plugin<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>${smart-doc.version}<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">configuration</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">includes</span>&gt;</span>
+                        <span class="hljs-comment">&lt;!--&#x683C;&#x5F0F;&#x4E3A;&#xFF1A;groupId:artifactId;&#x53C2;&#x8003;&#x5982;&#x4E0B;--&gt;</span>
+                        <span class="hljs-comment">&lt;!--&#x4E5F;&#x53EF;&#x4EE5;&#x652F;&#x6301;&#x6B63;&#x5219;&#x5F0F;&#x5982;&#xFF1A;com.alibaba:.* --&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">include</span>&gt;</span>com.power.doc:.*<span class="hljs-tag">&lt;/<span class="hljs-name">include</span>&gt;</span>
+<span class="hljs-comment">&lt;!--                        &lt;include&gt;com.baomidou:mybatis-plus-extension&lt;/include&gt;--&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">include</span>&gt;</span>com.github.shalousun:.*<span class="hljs-tag">&lt;/<span class="hljs-name">include</span>&gt;</span>
+<span class="hljs-comment">&lt;!--                        &lt;include&gt;org.springframework:spring-web&lt;/include&gt;--&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">includes</span>&gt;</span>
+                    <span class="hljs-comment">&lt;!--&#x6307;&#x5B9A;&#x751F;&#x6210;&#x6587;&#x6863;&#x7684;&#x4F7F;&#x7528;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;--&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">configFile</span>&gt;</span>./src/main/resources/smart-doc.json<span class="hljs-tag">&lt;/<span class="hljs-name">configFile</span>&gt;</span>
+                    <span class="hljs-comment">&lt;!--&#x6307;&#x5B9A;&#x9879;&#x76EE;&#x540D;&#x79F0;--&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">projectName</span>&gt;</span>&#x6D4B;&#x8BD5;<span class="hljs-tag">&lt;/<span class="hljs-name">projectName</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">configuration</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">executions</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">execution</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">goals</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">goal</span>&gt;</span>html<span class="hljs-tag">&lt;/<span class="hljs-name">goal</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">goals</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">execution</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">executions</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">plugin</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">plugins</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">build</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">project</span>&gt;</span>
+</code></pre>
+<h2 id="&#x591A;&#x6A21;&#x5757;"><a href="https://gitee.com/smart-doc-team/spring-boot-maven-multiple-module" target="_blank">&#x591A;&#x6A21;&#x5757;</a></h2>
+<h3 id="&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x7ED3;&#x6784;">&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x7ED3;&#x6784;</h3>
+<p>&#x5176;&#x4E2D;<code>dubbo-provider</code>, <code>spring-boot-web1</code>, <code>spring-boot-web2</code>, <code>spring-boot-web3</code>, <code>spring-boot-web4</code>&#x4E3A;&#x5404;&#x670D;&#x52A1;&#x542F;&#x52A8;&#x6A21;&#x5757;</p>
+<pre><code class="lang-shell">spring-boot-maven-multiple-module-master
+&#x251C;&#x2500;&#x2500; common
+&#x2502;   &#x251C;&#x2500;&#x2500; pom.xml
+&#x251C;&#x2500;&#x2500; dubbo-api
+&#x2502;   &#x251C;&#x2500;&#x2500; pom.xml
+&#x251C;&#x2500;&#x2500; dubbo-provider
+&#x2502;   &#x251C;&#x2500;&#x2500; pom.xml
+&#x2502;   &#x2514;&#x2500;&#x2500; src
+&#x2502;       &#x251C;&#x2500;&#x2500; main
+&#x2502;       &#x2502;   &#x251C;&#x2500;&#x2500; java
+&#x2502;       &#x2502;   &#x2502;   &#x2514;&#x2500;&#x2500; com
+&#x2502;       &#x2502;   &#x2514;&#x2500;&#x2500; resources
+&#x2502;       &#x2502;       &#x251C;&#x2500;&#x2500; application.yml
+&#x2502;       &#x2502;       &#x251C;&#x2500;&#x2500; smart-doc.json
+&#x251C;&#x2500;&#x2500; module2
+&#x2502;   &#x2514;&#x2500;&#x2500; pom.xml
+&#x251C;&#x2500;&#x2500; pom.xml
+&#x251C;&#x2500;&#x2500; spring-boot-web
+&#x2502;   &#x251C;&#x2500;&#x2500; pom.xml
+&#x2502;   &#x2514;&#x2500;&#x2500; src
+&#x2502;       &#x2514;&#x2500;&#x2500; main
+&#x2502;           &#x251C;&#x2500;&#x2500; java
+&#x2502;           &#x2502;   &#x2514;&#x2500;&#x2500; com
+&#x2502;           &#x2514;&#x2500;&#x2500; resources
+&#x2502;               &#x251C;&#x2500;&#x2500; application.yml
+&#x2502;               &#x251C;&#x2500;&#x2500; smart-doc.json
+&#x251C;&#x2500;&#x2500; spring-boot-web2
+&#x2502;   &#x251C;&#x2500;&#x2500; pom.xml
+&#x2502;   &#x2514;&#x2500;&#x2500; src
+&#x2502;       &#x2514;&#x2500;&#x2500; main
+&#x2502;           &#x251C;&#x2500;&#x2500; java
+&#x2502;           &#x2502;   &#x2514;&#x2500;&#x2500; com
+&#x2502;           &#x2514;&#x2500;&#x2500; resources
+&#x2502;               &#x251C;&#x2500;&#x2500; application.yml
+&#x2502;               &#x251C;&#x2500;&#x2500; smart-doc.json
+&#x251C;&#x2500;&#x2500; spring-boot-web3
+&#x2502;   &#x251C;&#x2500;&#x2500; pom.xml
+&#x2502;   &#x2514;&#x2500;&#x2500; src
+&#x2502;       &#x2514;&#x2500;&#x2500; main
+&#x2502;           &#x251C;&#x2500;&#x2500; java
+&#x2502;           &#x2502;   &#x2514;&#x2500;&#x2500; com
+&#x2502;           &#x2514;&#x2500;&#x2500; resources
+&#x2502;               &#x251C;&#x2500;&#x2500; application.yml
+&#x2502;               &#x251C;&#x2500;&#x2500; smart-doc.json
+&#x251C;&#x2500;&#x2500; spring-boot-web4
+&#x2502;   &#x251C;&#x2500;&#x2500; pom.xml
+&#x2502;   &#x2514;&#x2500;&#x2500; src
+&#x2502;       &#x2514;&#x2500;&#x2500; main
+&#x2502;           &#x251C;&#x2500;&#x2500; java
+&#x2502;           &#x2502;   &#x2514;&#x2500;&#x2500; com
+&#x2502;           &#x2514;&#x2500;&#x2500; resources
+&#x2502;               &#x251C;&#x2500;&#x2500; application.yml
+&#x2502;               &#x251C;&#x2500;&#x2500; smart-doc.json
+&#x2514;&#x2500;&#x2500; sub-module
+    &#x251C;&#x2500;&#x2500; pom.xml
+    &#x251C;&#x2500;&#x2500; simple-api
+    &#x2502;   &#x251C;&#x2500;&#x2500; pom.xml
+    &#x2514;&#x2500;&#x2500; web-test
+        &#x251C;&#x2500;&#x2500; pom.xml
+</code></pre>
+<h3 id="pom&#x793A;&#x4F8B;"><code>pom</code>&#x793A;&#x4F8B;</h3>
+<p>&#x6700;&#x5916;&#x5C42;<code>spring-boot-maven-multiple-module</code>&#x4E0B;&#x7684;<code>pom</code>&#x6587;&#x4EF6;&#x5B9A;&#x4E49;&#x63D2;&#x4EF6;&#x914D;&#x7F6E;&#x7BA1;&#x7406;</p>
+<pre><code class="lang-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span><span class="hljs-meta">?&gt;</span></span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">project</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://maven.apache.org/POM/4.0.0&quot;</span> <span class="hljs-attr">xmlns:xsi</span>=<span class="hljs-string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+  <span class="hljs-attr">xsi:schemaLocation</span>=<span class="hljs-string">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">modelVersion</span>&gt;</span>4.0.0<span class="hljs-tag">&lt;/<span class="hljs-name">modelVersion</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.power.test<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-maven-multiple-module<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">packaging</span>&gt;</span>pom<span class="hljs-tag">&lt;/<span class="hljs-name">packaging</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>0.1-SNAPSHOT<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">modules</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">module</span>&gt;</span>common<span class="hljs-tag">&lt;/<span class="hljs-name">module</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">module</span>&gt;</span>spring-boot-web<span class="hljs-tag">&lt;/<span class="hljs-name">module</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">module</span>&gt;</span>spring-boot-web2<span class="hljs-tag">&lt;/<span class="hljs-name">module</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">module</span>&gt;</span>sub-module<span class="hljs-tag">&lt;/<span class="hljs-name">module</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">module</span>&gt;</span>dubbo-api<span class="hljs-tag">&lt;/<span class="hljs-name">module</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">module</span>&gt;</span>dubbo-provider<span class="hljs-tag">&lt;/<span class="hljs-name">module</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">module</span>&gt;</span>spring-boot-web3<span class="hljs-tag">&lt;/<span class="hljs-name">module</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">module</span>&gt;</span>module2<span class="hljs-tag">&lt;/<span class="hljs-name">module</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">module</span>&gt;</span>spring-boot-web4<span class="hljs-tag">&lt;/<span class="hljs-name">module</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">modules</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>spring-boot-maven-multiple-module<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>http://www.example.com<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">parent</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>3.1.0<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">relativePath</span>/&gt;</span> <span class="hljs-comment">&lt;!-- lookup parent from repository --&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">parent</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">properties</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="hljs-tag">&lt;/<span class="hljs-name">project.build.sourceEncoding</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">maven.compiler.source</span>&gt;</span>17<span class="hljs-tag">&lt;/<span class="hljs-name">maven.compiler.source</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">maven.compiler.target</span>&gt;</span>17<span class="hljs-tag">&lt;/<span class="hljs-name">maven.compiler.target</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">properties</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">build</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">pluginManagement</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">plugins</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plugin</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.github.shalousun<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>smart-doc-maven-plugin<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>2.7.7<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">configuration</span>&gt;</span>
+                <span class="hljs-comment">&lt;!--&#x6307;&#x5B9A;&#x751F;&#x6210;&#x6587;&#x6863;&#x7684;&#x4F7F;&#x7528;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;--&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">configFile</span>&gt;</span>${basedir}/src/main/resources/smart-doc.json<span class="hljs-tag">&lt;/<span class="hljs-name">configFile</span>&gt;</span>
+                <span class="hljs-comment">&lt;!--&#x6307;&#x5B9A;&#x9879;&#x76EE;&#x540D;&#x79F0;--&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">projectName</span>&gt;</span>&#x6D4B;&#x8BD5;<span class="hljs-tag">&lt;/<span class="hljs-name">projectName</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">configuration</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">executions</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">execution</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">goals</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">goal</span>&gt;</span>html<span class="hljs-tag">&lt;/<span class="hljs-name">goal</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">goals</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">execution</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">executions</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">plugin</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plugin</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.apache.maven.plugins<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>maven-compiler-plugin<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>3.11.0<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">plugin</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plugin</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.apache.maven.plugins<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>maven-javadoc-plugin<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>3.5.0<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">plugin</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">plugins</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">pluginManagement</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">build</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">project</span>&gt;</span>
+</code></pre>
+<p><code>dubbo-provider</code>, <code>spring-boot-web1</code>, <code>spring-boot-web2</code>, <code>spring-boot-web3</code>, <code>spring-boot-web4</code></p>
+<pre><code class="lang-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span><span class="hljs-meta">?&gt;</span></span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">project</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://maven.apache.org/POM/4.0.0&quot;</span> <span class="hljs-attr">xmlns:xsi</span>=<span class="hljs-string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+  <span class="hljs-attr">xsi:schemaLocation</span>=<span class="hljs-string">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">parent</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-maven-multiple-module<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.power.test<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>0.1-SNAPSHOT<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">parent</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">modelVersion</span>&gt;</span>4.0.0<span class="hljs-tag">&lt;/<span class="hljs-name">modelVersion</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>dubbo-provider<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>dubbo-provider<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>https://www.example.com<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">build</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">plugins</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">plugin</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">plugin</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">plugin</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.github.shalousun<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>smart-doc-maven-plugin<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">plugin</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">plugin</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.apache.maven.plugins<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>maven-compiler-plugin<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">configuration</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">source</span>&gt;</span>${java.version}<span class="hljs-tag">&lt;/<span class="hljs-name">source</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">target</span>&gt;</span>${java.version}<span class="hljs-tag">&lt;/<span class="hljs-name">target</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">encoding</span>&gt;</span>UTF-8<span class="hljs-tag">&lt;/<span class="hljs-name">encoding</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">configuration</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">plugin</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">plugins</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">finalName</span>&gt;</span>dubbo-provider<span class="hljs-tag">&lt;/<span class="hljs-name">finalName</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">build</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">project</span>&gt;</span>
+</code></pre>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> &#xA9; All Rights Reserved </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> updated 2023-11-05 16:33:12 </span> </footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
                                 </section>
@@ -916,7 +1167,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"示例","level":"1.5","depth":1,"next":{"title":"单模块","level":"1.5.1","depth":2,"anchor":"#单模块","path":"example.md","ref":"example.md#单模块","articles":[]},"previous":{"title":"最佳实践","level":"1.4","depth":1,"path":"bestPractice.md","ref":"bestPractice.md","articles":[]},"dir":"ltr"},"config":{"plugins":["page-footer-ex","livereload","advanced-emoji","code","popup","back-to-top-button","chapter-fold","search-pro"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"chapter-fold":{},"livereload":{},"page-footer-ex":{"copyright":"© All Rights Reserved","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"updated"},"search-pro":{"cutWordLib":"nodejieba"},"search":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"example.md","mtime":"2023-10-30T14:18:20.180Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-11-02T16:39:35.247Z"},"basePath":".","book":{"language":"zh-hans"}});
+            gitbook.page.hasChanged({"page":{"title":"示例","level":"1.5","depth":1,"next":{"title":"单模块","level":"1.5.1","depth":2,"anchor":"#单模块","path":"example.md","ref":"example.md#单模块","articles":[]},"previous":{"title":"最佳实践","level":"1.4","depth":1,"path":"bestPractice.md","ref":"bestPractice.md","articles":[]},"dir":"ltr"},"config":{"plugins":["page-footer-ex","livereload","advanced-emoji","code","popup","back-to-top-button","chapter-fold","search-pro"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"chapter-fold":{},"livereload":{},"page-footer-ex":{"copyright":"© All Rights Reserved","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"updated"},"search-pro":{"cutWordLib":"nodejieba"},"search":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"example.md","mtime":"2023-11-05T08:33:12.602Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-11-05T08:34:45.227Z"},"basePath":".","book":{"language":"zh-hans"}});
         });
     </script>
 </div>
