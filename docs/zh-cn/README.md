@@ -1,7 +1,7 @@
 ### smart-doc
 
 
-![maven](https://img.shields.io/maven-central/v/com.github.shalousun/smart-doc)
+![maven](https://img.shields.io/maven-central/v/com.ly.smart-doc/smart-doc)
 [![License](https://img.shields.io/badge/license-Apache%202-green.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 ![number of issues closed](https://img.shields.io/github/issues-closed-raw/smart-doc-group/smart-doc)
 ![closed pull requests](https://img.shields.io/github/issues-pr-closed/smart-doc-group/smart-doc)
@@ -53,7 +53,7 @@ smart-doc + [Torna](http://torna.cn/) 组成行业领先的文档生成和管理
 
 ### Contact
 
-愿意参与构建`smart-doc`或者是需要交流问题可以加入qq群，[常见问题答疑](https://smart-doc-group.github.io/#/zh-cn/faq)
+愿意参与构建`smart-doc`或者是需要交流问题可以扫描微信二维码发送`smart-doc`备注信息后管理员拉进群，[常见问题答疑](https://smart-doc-group.github.io/#/zh-cn/faq)
 
 <img src="../_images/smart-doc-qq.jpg" title="qq群" width="200px" height="210px"/>
 <img src="../_images/smart-doc-qq2.jpeg" title="qq群2" width="200px" height="210px"/>

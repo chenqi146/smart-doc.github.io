@@ -21,7 +21,7 @@
 在项目启动类所在模块的`pom.xml`文件配置`Maven插件`, 注意: 需要`includes`依赖的源码包
 ```xml
 <plugin>
-    <groupId>com.github.shalousun</groupId>
+    <groupId>com.ly.smart-doc</groupId>
     <artifactId>smart-doc-maven-plugin</artifactId>
     <version>[最新版本]</version>
     <configuration> 

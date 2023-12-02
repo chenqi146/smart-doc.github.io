@@ -301,13 +301,13 @@ config.setSourceCodePaths(
 ```xml
 <!--依赖的库-->
 <dependency>
-    <groupId>com.github.shalousun</groupId>
+    <groupId>com.ly.smart-doc</groupId>
     <artifactId>common-util</artifactId>
     <version>1.8.6</version>
 </dependency>
 <!--依赖库源码，使用smart-doc的插件无需使用这种方式加载sources-->
 <dependency>
-    <groupId>com.github.shalousun</groupId>
+    <groupId>com.ly.smart-doc</groupId>
     <artifactId>common-util</artifactId>
     <version>1.8.6</version>
     <classifier>sources</classifier>

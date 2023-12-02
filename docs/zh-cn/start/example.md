@@ -51,7 +51,7 @@ smart-doc-example-cn
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
             <plugin>
-                <groupId>com.github.shalousun</groupId>
+                <groupId>com.ly.smart-doc</groupId>
                 <artifactId>smart-doc-maven-plugin</artifactId>
                 <version>${smart-doc.version}</version>
                 <configuration>
@@ -60,7 +60,7 @@ smart-doc-example-cn
                         <!--也可以支持正则式如：com.alibaba:.* -->
                         <include>com.power.doc:.*</include>
 <!--                        <include>com.baomidou:mybatis-plus-extension</include>-->
-                        <include>com.github.shalousun:.*</include>
+                        <include>com.ly.smart-doc:.*</include>
 <!--                        <include>org.springframework:spring-web</include>-->
                     </includes>
                     <!--指定生成文档的使用的配置文件-->
@@ -193,7 +193,7 @@ spring-boot-maven-multiple-module-master
         <pluginManagement>
         <plugins>
             <plugin>
-            <groupId>com.github.shalousun</groupId>
+            <groupId>com.ly.smart-doc</groupId>
             <artifactId>smart-doc-maven-plugin</artifactId>
             <version>2.7.7</version>
             <configuration>
@@ -253,7 +253,7 @@ spring-boot-maven-multiple-module-master
             <artifactId>spring-boot-maven-plugin</artifactId>
         </plugin>
         <plugin>
-            <groupId>com.github.shalousun</groupId>
+            <groupId>com.ly.smart-doc</groupId>
             <artifactId>smart-doc-maven-plugin</artifactId>
         </plugin>
         <plugin>

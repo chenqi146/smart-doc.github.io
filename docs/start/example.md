@@ -51,7 +51,7 @@ smart-doc-example-cn
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
             <plugin>
-                <groupId>com.github.shalousun</groupId>
+                <groupId>com.ly.smart-doc</groupId>
                 <artifactId>smart-doc-maven-plugin</artifactId>
                 <version>${smart-doc.version}</version>
                 <configuration>
@@ -60,7 +60,7 @@ smart-doc-example-cn
                         <!--com.alibaba:.* -->
                         <include>com.power.doc:.*</include>
 <!--                        <include>com.baomidou:mybatis-plus-extension</include>-->
-                        <include>com.github.shalousun:.*</include>
+                        <include>com.ly.smart-doc:.*</include>
 <!--                        <include>org.springframework:spring-web</include>-->
                     </includes>
                     <configFile>./src/main/resources/smart-doc.json</configFile>
@@ -191,7 +191,7 @@ The `pom` file under the outermost `spring-boot-maven-multiple-module` defines p
         <pluginManagement>
         <plugins>
             <plugin>
-            <groupId>com.github.shalousun</groupId>
+            <groupId>com.ly.smart-doc</groupId>
             <artifactId>smart-doc-maven-plugin</artifactId>
             <version>2.7.7</version>
             <configuration>
@@ -249,7 +249,7 @@ The `pom` file under the outermost `spring-boot-maven-multiple-module` defines p
             <artifactId>spring-boot-maven-plugin</artifactId>
         </plugin>
         <plugin>
-            <groupId>com.github.shalousun</groupId>
+            <groupId>com.ly.smart-doc</groupId>
             <artifactId>smart-doc-maven-plugin</artifactId>
         </plugin>
         <plugin>

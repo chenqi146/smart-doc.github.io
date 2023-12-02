@@ -12,7 +12,7 @@ Let's look at the integration method.
 Add smart-doc-maven-plugin to your dubbo service api or dubbo provider module. Of course you only need to select one method
 ```xml
 <plugin>
-    <groupId>com.github.shalousun</groupId>
+    <groupId>com.ly.smart-doc</groupId>
     <artifactId>smart-doc-maven-plugin</artifactId>
     <version>[Latest version]</version>
     <configuration>

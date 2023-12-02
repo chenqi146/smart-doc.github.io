@@ -21,7 +21,7 @@ Create the `smart-doc.json` file in the `resources` directory of the module wher
 Configure the `Maven plug-in` in the `pom.xml` file of the module where the project startup class is located. Note: the source code package that `includes` depends on is required.
 ```xml
 <plugin>
-     <groupId>com.github.shalousun</groupId>
+     <groupId>com.ly.smart-doc</groupId>
      <artifactId>smart-doc-maven-plugin</artifactId>
      <version>[latest version]</version>
      <configuration>
